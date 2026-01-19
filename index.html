@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guapo Sport - Ultra Ultra Edition</title>
+    <meta name="description" content="Guapo Sport - Premium Arabic Sports Broadcast Matrix">
+    <!-- Tajawal Font for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Ultra Y2K Visual Layers -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+    <div class="glow-bg"></div>
+
+    <!-- Header -->
+    <header class="main-header glass-panel">
+        <div class="logo-area">
+            <div class="cyber-logo">
+                <span class="glitch" data-text="GUAPO">GUAPO</span>
+                <span class="neon-text">SPORT</span>
+            </div>
+            <span class="y2k-badge">ULTRA v2.1</span>
+        </div>
+
+        <div class="header-controls">
+            <div id="date-display" class="cyber-font">SYS_DATE: --/--/--</div>
+            <div class="status-indicator">
+                <span class="neon-dot pulse"></span>
+                <span id="status-text">MATRIX_SYNC_OK</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+
+        <!-- Sidebar Left: Matches -->
+        <aside class="sidebar side-matches glass-panel">
+            <div class="sidebar-header">
+                <h3 class="neon-text">جدول المباريات</h3>
+                <span class="cyber-badge">TODAY</span>
+            </div>
+            <div id="match-list" class="match-list cyber-scrollbar">
+                <div class="loading-state">
+                    <div class="cyber-spinner"></div>
+                    <p>جاري سحب البيانات...</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Area -->
+        <main class="player-area">
+            <div class="video-container glass-panel">
+                <div class="video-wrapper">
+                    <!-- Internal Placeholder -->
+                    <div id="placeholder-screen" class="placeholder y2k-placeholder">
+                        <div class="holo-box">
+                            <div class="cyber-spinner big"></div>
+                            <h2 class="neon-text glitch" data-text="WELCOME TO THE MATRIX">WELCOME TO THE MATRIX</h2>
+                            <p class="cyber-font">SELECT A FEED TO INITIALIZE...</p>
+                        </div>
+                    </div>
+
+                    <!-- Ad Shield: Protects edges from deceptive clicks -->
+                    <div class="ad-shield">
+                        <div class="shield-edge shield-top"></div>
+                        <div class="shield-edge shield-bottom"></div>
+                        <div class="shield-edge shield-left"></div>
+                        <div class="shield-edge shield-right"></div>
+                    </div>
+
+                    <!-- Web Player (Pure Albaplayer) -->
+                    <iframe id="web-player" class="hidden" frameborder="0" allowfullscreen allow="fullscreen"
+                        sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+                </div>
+            </div>
+
+            <div class="channel-info glass-panel">
+                <div class="info-meta">
+                    <div class="feed-status">
+                        <span class="neon-dot green"></span>
+                        <span id="stream-type-badge" class="stream-badge">SECURE_FEED</span>
+                    </div>
+                    <h2 id="current-channel-name" class="neon-text">FEED_ID: NULL</h2>
+                    <button id="fullscreen-btn" class="cyber-button mini-btn">
+                        <span>⛶</span> FULLSCREEN
+                    </button>
+                </div>
+                <div class="stream-stats">
+                    <div class="quality-selector glass-panel">
+                        <span class="cyber-badge">AUTO_HD</span>
+                        <span class="cyber-badge">60FPS</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar Right: Channels -->
+        <aside class="sidebar side-channels glass-panel">
+            <div class="sidebar-header">
+                <input type="text" id="search-input" placeholder="SEARCH_CHANNELS..." class="cyber-input">
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab-btn y2k-tab active" data-filter="all">ALL_FEEDS</button>
+                <button class="tab-btn y2k-tab" data-filter="premium">PREMIUM</button>
+            </div>
+
+            <div id="channels-list" class="channels-list cyber-scrollbar">
+                <div class="loading-channels neon-text">INITIALIZING_DATA...</div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer Stats -->
+    <footer class="cyber-footer glass-panel">
+        <div class="marquee-wrapper">
+            <div class="marquee-content cyber-font">
+                i love you Tsuwy <3 // i love you Tsuwy <3 // i love you Tsuwy <3 // i love you Tsuwy <3 // i love you
+                    Tsuwy <3 </div>
+            </div>
+    </footer>
+
+</body>
+
+</html>
