@@ -8,8 +8,7 @@ const els = {
     streamTypeBadge: document.getElementById('stream-type-badge'),
     searchInput: document.getElementById('search-input'),
     dateDisplay: document.getElementById('date-display'),
-    tabs: document.querySelectorAll('.y2k-tab'),
-    fullscreenBtn: document.getElementById('fullscreen-btn')
+    tabs: document.querySelectorAll('.y2k-tab')
 };
 
 // --- DATA: Premium Channels (Direct Albaplayer) ---
@@ -36,7 +35,6 @@ function init() {
     fetchMatches();
 
     els.searchInput.oninput = handleSearch;
-    els.fullscreenBtn.onclick = toggleFullscreen;
 
     els.tabs.forEach(tab => {
         tab.onclick = () => {
@@ -222,16 +220,6 @@ function filterChannels(category, query) {
         filtered = filtered.filter(ch => [1, 2, 3].includes(ch.id));
     }
     renderChannels(filtered);
-}
-
-function toggleFullscreen() {
-    if (els.webPlayer.requestFullscreen) {
-        els.webPlayer.requestFullscreen();
-    } else if (els.webPlayer.webkitRequestFullscreen) {
-        els.webPlayer.webkitRequestFullscreen();
-    } else if (els.webPlayer.msRequestFullscreen) {
-        els.webPlayer.msRequestFullscreen();
-    }
 }
 
 document.addEventListener('DOMContentLoaded', init);
